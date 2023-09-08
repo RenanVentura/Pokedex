@@ -51,8 +51,8 @@
 }
 
 .pokemon .detail img{
-    max-width: 120%;
-    height: 120%;
+    max-width: auto;
+    height: 70px;
 }
 
 
