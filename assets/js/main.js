@@ -4,12 +4,7 @@ const limit = 10
 const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`
 
 //Retorna uma Promisse
-fetch(url).then(function(response){
-    console.log(response)
-})
-    .catch(function(error){
-        console.log(error)
-    })
-    .finally(function(){
-        console.log('Requisição Concluida')
-    })
+fetch(url)
+    .then((response) => response.json()) //Retorna quando consegue fazer a requisição 
+    .then((jsonBody) => console.log(jsonBody)) //Retorna quando consegue fazer a requisição
+    .catch((error)   => console.log(error))  // Retorna quando não consegue fazer a requisição
