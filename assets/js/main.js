@@ -3,8 +3,36 @@ const offset = 0
 const limit = 10
 const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`
 
-//Retorna uma Promisse
+function convertPokemonToLi(pokemon){
+    return `
+        <li class="pokemon">
+                        <span class="number">#001</span>
+                        <span class="name">${pokemon.name}</span>
+
+                        <div class="detail">
+                            <ol class="types">
+                                <li class="type">Grass</li>
+                                <li class="type">Poison</li>
+                            </ol>
+
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" alt="${pokemon.name}" >
+                        </div>                    
+                    </li>
+              `
+}
+const pokemonList = document.getElementById('pokemonList')
+
+// Retorna uma Promisse
 fetch(url)
     .then((response) => response.json()) //Retorna quando consegue fazer a requisição 
-    .then((jsonBody) => console.log(jsonBody)) //Retorna quando consegue fazer a requisição
+    .then((jsonBody) => jsonBody.results) //Retorna quando consegue fazer a requisição
+    .then((pokemonsList) => {
+       
+        for (let i = 0; i < pokemonsList.length; i++){
+            const pokemon = pokemonsList[i];
+            pokemonList.innerHTML += (convertPokemonToLi(pokemon))            
+        }
+
+
+    }) 
     .catch((error)   => console.log(error))  // Retorna quando não consegue fazer a requisição
