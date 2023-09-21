@@ -75,6 +75,7 @@
     margin: .25rem 0;
     margin-bottom: 0.25rem;
     text-transform: capitalize;
+    text-decoration: none
 }
 .number{
     color: #000;
@@ -127,6 +128,14 @@ border-radius: 1rem;
 padding: .25rem .5rem;
 color: #fff;
 font-size: .7rem
+}
+
+a:link{
+    text-decoration: none;
+}
+
+.pokemons:hover{
+    transform: scale(1.02s);
 }
 
 @media screen and (min-width: 380px){

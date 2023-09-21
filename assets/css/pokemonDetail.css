@@ -1,0 +1,60 @@
+@import url('https://fonts.cdnfonts.com/css/pokemon-solid');
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('https://wallpapercave.com/wp/wp8695692.jpg');
+    background-attachment: fixed;
+}
+
+.pkmContent{
+    padding: 1rem;
+    margin: 1rem;
+    height: auto;
+    width: auto;
+    background-color: green; 
+    border-radius: 1rem;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.pkmh1{
+    color: #FFF;
+    font-size: 1.35rem;
+}
+
+.order{
+    color: #FFF;
+    font-size: 1rem;
+}
+
+img{
+    height:30px;
+    width: auto;
+}
+
+.pkmdetail{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    
+}
+.pkmimg{
+height: 130px;
+width: auto;
+}
+
+.types{
+    display: flex;
+  text-align: center;
+}
+
+.type{
+    text-align: center;
+    flex-direction: row;
+    list-style: none;
+}
