@@ -1,22 +1,31 @@
+@import url('https://fonts.cdnfonts.com/css/pokemon-solid');
 * {
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
 
 body{
+    background-image: url('https://wallpapers.com/images/featured-full/pokemon-stadium-dqqp686gjn57ka0u.jpg');
     background-color: #2471c9;
+    background-attachment: fixed;
 }
 
 h1{
-    color: #fff;
+    font-family: 'Pokemon Solid', sans-serif;
+    color: yellow;
     text-align: center;
-    font-size: 3rem;
+    font-size: 5rem;
+    text-shadow: 
+    -5px -5px 0px blue,
+    -5px 5px 0px blue,
+    5px -5px 0px blue,
+    5px  0px 0px blue;
 }
 
 .content{
     width: 100vw;
     padding: 1rem;
-    background-color: #48adff;
+    background-color:#00ccff;
     border-radius: 1rem;
 
 } 
